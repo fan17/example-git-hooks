@@ -1,0 +1,16 @@
+#!/bin/sh
+
+MASTER='refs/heads/master'
+
+if git symbolic-ref HEAD | grep $MASTER >/dev/null; then
+    exec < /dev/tty
+    while true; do
+        read -p "You are committing exactly into master, are you sure? [y|n]" yn
+        case $yn in
+            [Yy]* ) exit 0;;
+            [Nn]* ) exit 1;;
+        esac
+    done
+fi
+
+exit 0

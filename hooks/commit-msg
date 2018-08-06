@@ -1,0 +1,12 @@
+#!/bin/sh
+
+SEVEN_DIRTY_WORDS="shit|piss|fuck|cunt|cocksucker|motherfucker|tits" # http://en.wikipedia.org/wiki/Seven_dirty_words
+
+# people who didn't use this hook -> http://www.commitlogsfromlastnight.com/
+
+if grep -qE $SEVEN_DIRTY_WORDS $1; then
+  echo "Okay, you really need to chill out"
+  exit 1
+fi
+
+exit 0

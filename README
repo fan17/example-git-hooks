@@ -1,0 +1,5 @@
+# set path to hooks
+git config core.hooksPath [project-hooks-folder]
+
+# make hooks executable
+chmod +x script.sh

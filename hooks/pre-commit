@@ -1,0 +1,14 @@
+#!/bin/bash
+
+HOOKS=( './hooks/pre-commit-run-tests' './hooks/pre-commit-do-not-commit-directly-to-master' )
+
+for i in "${HOOKS[@]}"
+do
+    echo hook is about to start: $i
+    source $i
+    ret_code=$?
+	if [[ ret_code -eq 1 ]]; then
+        exit 1 
+    fi
+done
+

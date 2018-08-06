@@ -1,0 +1,9 @@
+{
+  "name": "example-git-hooks",
+  "scripts": {
+    "test": "./test/test-success.sh"
+  },
+  "author": "jedrzejczak <jedrzejczak.andrzej89@gmail.com> (https://github.com/jedrzejczak)",
+  "license": "ISC",
+  "homepage": "https://github.com/jedrzejczak/example-git-hooks#readme"
+}
